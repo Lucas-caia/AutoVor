@@ -1,0 +1,7 @@
+{
+  "id": "vortex-background-assistant",
+  "name": "Vortex em segundo plano",
+  "author": "Projeto local",
+  "version": "1.1.1",
+  "description": "Encaminha os downloads manuais da coleção para abas inativas do Chrome. Iniciar e pausar pela extensão do navegador."
+}

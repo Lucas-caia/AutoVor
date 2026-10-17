@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  font: 13px/1.5 system-ui, sans-serif;
+  color: #eaf3ff;
+  background: #050a14;
+}
+* { box-sizing: border-box; }
+body {
+  width: 380px;
+  margin: 0;
+  padding: 24px;
+  background: radial-gradient(ellipse at 15% 0%, #102649 0%, transparent 55%), #070d18;
+}
+header { display: flex; gap: 14px; align-items: center; margin-bottom: 24px; }
+.logo {
+  display: block;
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #020711;
+  border: 1px solid #214473;
+  border-radius: 16px;
+  box-shadow: 0 0 26px #1475ff1c;
+}
+.eyebrow {
+  color: #70afff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin: 0 0 6px;
+}
+h1 { font-size: 17px; line-height: 1.25; margin: 0; letter-spacing: -.3px; }
+header p { margin: 5px 0 0; color: #91a8c6; font-size: 11px; }
+.card {
+  padding: 19px;
+  background: linear-gradient(135deg, #102039, #0c1729);
+  border: 1px solid #223c5d;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px #0000001f;
+}
+.row { display: flex; gap: 9px; align-items: center; }
+.row strong { font-size: 13px; }
+.dot { width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: #71839c; }
+.dot.active { background: #66bcff; box-shadow: 0 0 0 4px #42a5ff12, 0 0 12px #42a5ff66; }
+.dot.warning { background: #f4bb60; }
+#detail { min-height: 40px; color: #a8bdd8; margin: 12px 0 18px; font-size: 12px; }
+.count { border-top: 1px solid #28405e; padding-top: 17px; display: flex; gap: 15px; align-items: center; }
+.count > span:first-child { font-size: 38px; font-weight: 700; line-height: 1; color: #7abaff; letter-spacing: -1px; }
+.count > span:last-child { max-width: 180px; font-size: 11px; color: #a0b7d4; }
+button {
+  width: 100%;
+  border: 1px solid #4899ff;
+  border-radius: 11px;
+  background: linear-gradient(110deg, #1878ef, #1457cc);
+  color: #fff;
+  font: 600 13px system-ui;
+  padding: 14px;
+  margin-top: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px #0864df26;
+  transition: background .15s ease, border-color .15s ease;
+}
+button:hover { background: #2586ff; border-color: #78b6ff; }
+button:focus-visible { outline: 2px solid #a2d5ff; outline-offset: 3px; }
+button:disabled { opacity: .5; cursor: default; }
+button.pause { background: #112b4e; border-color: #315f96; box-shadow: none; color: #c5e2ff; }
+button.pause:hover { background: #183a65; border-color: #4b88ce; }
+footer { color: #8da5c4; font-size: 11px; line-height: 1.7; margin-top: 21px; border-top: 1px solid #182a42; padding-top: 16px; }
+#error { color: #ffd49c; background: #33251a; border: 1px solid #654a2f; border-radius: 9px; padding: 11px; font-size: 12px; }

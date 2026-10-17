@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "Vortex em segundo plano",
+  "version": "1.0.8",
+  "minimum_chrome_version": "120",
+  "description": "Automates Nexus Mods collection download clicks in Vortex using background Chrome tabs, keeping your mouse free.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAofsYqnRxRw3V6S0c9BfSJomSEugZpomHVHBFB00hpqvLmIy1GMBO7GemsCgYSu8vvjZ7AghHh9DGpzru3JuvvKZgm72XM2LJg/qj3ExoPx7GjBA+Z+659YCo2sccbEKRv29YoOj/mrgOWNlMQNzdfGKXJnjLy8HQOW5aeB5HGT2i2DLsPxudSyZQr2IhdXncfmxToHqQvT+Pq4hS39H1L5oTyE/lSnI/KCFcPDhD3Dy4KVgJKbXGtEcvYdtKejC8H+3HAV+MhiVfngubQA3UtL0uZ1/ivDE/b/jAe4L1LSFYLuIWw2elHVTx82tSxVBKga7sUt0ilQWxQdzyBc/gZQIDAQAB",
+  "icons": {
+    "16": "assets/logo.png",
+    "32": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  },
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://www.nexusmods.com/*",
+    "https://nexusmods.com/*",
+    "http://127.0.0.1:48927/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Vortex em segundo plano",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/logo.png",
+      "32": "assets/logo.png",
+      "48": "assets/logo.png",
+      "128": "assets/logo.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nexusmods.com/*",
+        "https://nexusmods.com/*"
+      ],
+      "js": [
+        "page-hook.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://www.nexusmods.com/*",
+        "https://nexusmods.com/*"
+      ],
+      "js": [
+        "dom.js",
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ]
+}
