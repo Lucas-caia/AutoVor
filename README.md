@@ -1,10 +1,5 @@
 # Vortex em segundo plano
 
-<p align="center">
-  <img src="chrome/assets/logo.png" alt="Logo: tornado azul e preto" width="240">
-</p>
-
-
 **Automatize os cliques de download das suas coleções e continue usando o computador.**
 
 Ao instalar uma coleção com downloads manuais, o Vortex pode abrir uma página da Nexus Mods para cada arquivo e exigir outro clique em **Slow download**. Este projeto acompanha a solicitação atual do Vortex, aciona esses botões em abas inativas do Chrome e fecha cada aba após a confirmação de que o Vortex recebeu o download.
